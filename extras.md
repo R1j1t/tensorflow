@@ -13,3 +13,5 @@ that, tensor can have more than 2 dimensions, unlike matrix).
 
 example code: `tf.argmax(y,1)`
 
+# 3
+Hyperparatmeter are those parameters that you change durring run to get a good model. eg include learning rate, number of iterations etc
