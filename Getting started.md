@@ -1,5 +1,7 @@
 # tensorflow
 
+Back to [home page](README)
+
 ## Installation problem
 If even after installing tensorflow, you get the error as `No module named 'tensorflow'`,
 then it is because you haven't run the following command:
