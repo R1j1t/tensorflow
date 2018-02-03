@@ -95,9 +95,17 @@ By defining the model we have the basic structure ready. Now our task is to trai
 #### Model training (sklearn)
 `reg_var.fit(X_train,Y_train)`
 
+#### Model creation (tensorflow)
+
+```py
+    classifier = tf.estimator.DNNClassifier(
+        feature_columns=my_feature_columns,
+        hidden_units=[10, 10],
+        n_classes=3)
+```
+
 #### Model training (tensorflow)
 
-#### Model creation (tensorflow)
 In tensorflow much like in sklearn we will use the following syntax:
 
 ```python
@@ -162,6 +170,7 @@ def eval_input_fn(features, labels=None, batch_size=None):
 ```
 
 The difference between `classifier.train` and `classifier.evaluate` is the data inserted. In `classifier.train` we provide the training data `X_train` and `Y_train` and in `classifier.evaluate` we provide `X_test`, `Y_test`.
+
 
 ## Prediction using learned model
 
