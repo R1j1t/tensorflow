@@ -64,6 +64,7 @@ classifier.train(
     #steps argument tells the method to stop training after a number of training steps.
     steps=args.train_steps)
 ```
+**Note:** Estimators expect an `input_fn` to take no arguments. To work around this restriction, we use `lambda` to capture the arguments and provide the expected interface.
 
 #### Evaluate the trained model
 
