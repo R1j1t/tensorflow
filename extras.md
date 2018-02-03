@@ -22,5 +22,5 @@ Estimator as the tf website says is a high level representation of a **complete*
 - evaluate the model
 - generate predictions
 
-! [Tensorflow API](https://www.tensorflow.org/images/tensorflow_programming_environment.png)
+![Tensorflow API](https://www.tensorflow.org/images/tensorflow_programming_environment.png)
 
