@@ -1,6 +1,6 @@
 # tensorflow
 
-Back to [home page](https://r1j1t.github.io/tf.notes/)
+Back to [home page](tf.notes)
 
 ## Installation problem
 If even after installing tensorflow, you get the error as `No module named 'tensorflow'`,
