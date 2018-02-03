@@ -1,6 +1,6 @@
 # Miscellaneous info on tensorflow
 
-Back to [home page](README)
+Back to [home page](/tf.notes/)
 
 ## 1 tensorflow dependencies
 To do large complex numerical computation like muatrix multiplication, `tf` 

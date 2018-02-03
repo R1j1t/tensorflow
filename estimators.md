@@ -1,6 +1,6 @@
 # tf.sstimators
 
-Back to [home page](README)
+Back to [home page](/tf.notes/)
 
 tf websites explains estimators as follows:
 >An **Estimator** is any class derived from tf.estimator.Estimator. TensorFlow provides a collection of pre-made Estimators (for example, LinearRegressor) to implement common ML algorithms.

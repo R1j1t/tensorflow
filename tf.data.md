@@ -1,6 +1,6 @@
 # dataset
 
-Back to [home page](README)
+Back to [home page](/tf.notes/)
 
 tf.data module assits in loading the data, manipulate it and pipe it to your model. First we will look at the tensor slicing. 
 
