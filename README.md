@@ -2,7 +2,9 @@
 
 These are my notes of tensorflow.
 
-[Getting started Page](tensorflow/Getting_started.md)
+[Getting started Page](https://r1j1t.github.io/tensorflow/Getting%20started)
 
 
-[Extras Page](tensorflow/extras.md)
+[Extras Page](https://r1j1t.github.io/tensorflow/extras)
+
+More pages will be added over time
