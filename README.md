@@ -1,4 +1,4 @@
-# tensorflow Notes
+# from tensorflow import notes
 
 These are my notes of tensorflow.
 
