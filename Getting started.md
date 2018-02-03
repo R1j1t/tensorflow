@@ -1,6 +1,6 @@
 # tensorflow
 
-Back to [home page]()
+Back to [home page](.)
 
 ## Installation problem
 If even after installing tensorflow, you get the error as `No module named 'tensorflow'`,
