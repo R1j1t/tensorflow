@@ -47,7 +47,7 @@ Try for multiple arrays as argument.
 
 After slicing step, the next step will be to batch the data and preferably shuffle the data as well. To do this we will use the following command:
 
-`data_ds = tf.shuffle(int).repeat().batch(batch_size)` 
+`data_ds = data_ds.shuffle(int).repeat().batch(batch_size)` 
 
 Each of the following functions perform the following task.
 
