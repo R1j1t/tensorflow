@@ -1,4 +1,4 @@
-# tf.sstimators
+# tf.estimators
 
 Back to [home page](/tf.notes/)
 
@@ -37,6 +37,9 @@ Intilizing refers to specifing the models and other parameters. eg of some of th
 - [tf.estimator.DNNClassifier](https://www.tensorflow.org/api_docs/python/tf/estimator/DNNClassifier)—for deep models that perform multi-class classification.
 - [tf.estimator.DNNLinearCombinedClassifier](https://www.tensorflow.org/api_docs/python/tf/estimator/DNNLinearCombinedClassifier)—for wide-n-deep models.
 - [tf.estimator.LinearClassifier](https://www.tensorflow.org/api_docs/python/tf/estimator/LinearClassifier)— for classifiers based on linear models.
+- [tf.estimator.DNNRegressor](https://www.tensorflow.org/api_docs/python/tf/estimator/DNNRegressor)— A regressor for TensorFlow DNN models..
+- [tf.estimator.LinearRegressor](https://www.tensorflow.org/api_docs/python/tf/estimator/LinearRegressor)— An estimator for TensorFlow Linear regression problems.
+- [tf.estimator.DNNLinearCombinedRegressor](https://www.tensorflow.org/api_docs/python/tf/estimator/DNNLinearCombinedRegressor)— An estimator for TensorFlow Linear and DNN joined models for regression. (Note:This estimator is also known as wide-n-deep.)
 
 There are many more models avilable, unfortunately i could not find a link where all the predefined models are avilable.
 
