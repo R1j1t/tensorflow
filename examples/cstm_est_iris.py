@@ -34,7 +34,7 @@ def my_model_fn(
     for unit in params["hidden_units"]:
         net = tf.layers.dense(net,units = unit, activation=tf.nn.relu)
     
-    logits = tf.layers.dense(net,params["n_classes"],activation=None)
+    logits = tf.layers.dense(net,params["n_classes"],activation=None,name='output_layer')
 
     predicted_classes = tf.argmax(logits, 1)
     
@@ -61,7 +61,7 @@ def my_model_fn(
                                           loss=loss,
                                           eval_metric_ops=metrics)
 
-    assert mode == tf.estimator.ModeKeys.TRAIN
+    #assert mode == tf.estimator.ModeKeys.TRAIN
 
     
     if mode == tf.estimator.ModeKeys.TRAIN:
@@ -86,9 +86,33 @@ classifier.train(
     steps=1000)        
 
 
+eval_result = classifier.evaluate(
+    input_fn = lambda:iris_data.eval_input_fn(test_x,test_y,100))
+
+print('\nTest set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
 
 
+# Generate predictions from the model
+expected = ['Setosa', 'Versicolor', 'Virginica']
+predict_x = {
+    'SepalLength': [5.1, 5.9, 6.9],
+    'SepalWidth': [3.3, 3.0, 3.1],
+    'PetalLength': [1.7, 4.2, 5.4],
+    'PetalWidth': [0.5, 1.5, 2.1],
+}
 
+predictions = classifier.predict(input_fn=lambda:iris_data.eval_input_fn(predict_x,
+                                                                        labels=None,
+                                                                        batch_size=100))
+
+for pred_dict, expec in zip(predictions, expected):
+    template = ('\nPrediction is "{}" ({:.1f}%), expected "{}"')
+
+    class_id = pred_dict['class_ids'][0]
+    probability = pred_dict['probabilities'][class_id]
+
+    print(template.format(iris_data.SPECIES[class_id],
+                            100 * probability, expec))
 
 
 
