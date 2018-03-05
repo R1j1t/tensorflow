@@ -90,3 +90,9 @@ predictions = classifier.predict(
     input_fn=lambda:iris_data.eval_input_fn(predict_x,
                                             batch_size=args.batch_size))
 ```
+
+This completes the section on estimators, to be more specific pre-made estimators. On the tensorflow website is a piece of advice for starting with a problem. ([Ref](https://www.tensorflow.org/programmers_guide/estimators#recommended_workflow))
+
+1. Use a suitable pre-made estimators and get the baseline to start with.
+2. Build and test the overall pipeline (which include reliabilty of data with these pre-made estimators)
+3. After doing this, it is recemonded to move on to custom made estimators.
