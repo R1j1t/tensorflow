@@ -4,7 +4,7 @@ These are my notes of tensorflow.
 
 [Getting started Page](Getting%20started): You should start from here and then go to below topics. Inspired and adapted from tensorflow website.
 
-[Dataset](tf.data): This page will help in basic understanding of providing input data to the function.
+[Dataset](tf.data): This page will help in basic understanding of providing input data to the function. <br />
 [Advanced Dataset](reading_data): This page holds a more in-depth notes, adapted from Tensorflow and StackeExchange website
 
 [Estimator module in Tensor flow](estimators): This will give you a basic understanding of models from training to predictions.
