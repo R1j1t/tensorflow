@@ -2,12 +2,12 @@
 
 Back to [home page](/tf.notes/)
 
-tf.data module assits in loading the data, manipulate it and pipe it to your model. First we will look at the tensor slicing. 
+tf.data module is an introduction to tf.data module and a much more detailed notes can be found under the title [Reading Data](reading_data) . This page will assist in loading the data, manipulate it and pipe it to your model. First we will look at the tensor slicing.
 
 ## Reading in-memory data
 For this we will use numpy arrays and gradually move to general input methods.
 
-### Slicing 
+### Slicing
 `tf.data.Dataset.from_tensor_slices((array,array...))`
 
 This function (`from_tensor_slices()`) return `tf.data.Dataset` representing **slices** of the array. For example an array of shape (10000,4,3) and I pass this array to the function. So the returned value is of shape (4,3).(We can group the data back by using batch argument explained later here).
@@ -47,7 +47,7 @@ Try for multiple arrays as argument.
 
 After slicing step, the next step will be to batch the data and preferably shuffle the data as well. To do this we will use the following command:
 
-`data_ds = data_ds.shuffle(int).repeat().batch(batch_size)` 
+`data_ds = data_ds.shuffle(int).repeat().batch(batch_size)`
 
 Each of the following functions perform the following task.
 
@@ -57,7 +57,7 @@ Each of the following functions perform the following task.
 
 ### Returning the value
 
-For returning the the value to other functions you will need to use the following method. 
+For returning the the value to other functions you will need to use the following method.
 
 `return dataset.make_one_shot_iterator().get_next()`
 
@@ -124,7 +124,7 @@ def eval_input_fn(features, labels, batch_size):
 ```
 ## Reading data from CSV
 
-This is the most common use case of dataset class. 
+This is the most common use case of dataset class.
 
 To read a CSV file we will use the `TextLineDataset` object to read the file line by line. But here the header will contain the details of the CSV file (like created plaform and other things which is not needed for our project) and not training examples so we will skip the 1st colomn by using `skip()` method.
 
